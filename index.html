@@ -132,7 +132,7 @@
             try {
                 // 2. 发送请求给 Python 后端
                 console.log("正在发送请求到 /upload ...");
-                const response = await fetch('http://localhost:8000/upload', {
+                const response = await fetch('/upload', {
                     method: 'POST',
                     body: formData
                 });
@@ -226,4 +226,5 @@
         }
     </script>
 </body>
+
 </html>
