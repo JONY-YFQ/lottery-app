@@ -190,7 +190,7 @@
                 // 红球样式 (中奖则变成绿色背景)
                 const redBallClass = isHit
                     ? "w-8 h-8 rounded-full bg-neon-green text-black font-bold flex items-center justify-center shadow-glow-green text-sm"
-                    : "w-8 h-8 rounded-full bg-gray-800 text-dim-text flex items-center justify-center text-sm border border-gray-700";
+                    : "w-8 h-8 rounded-full bg-gray-800 text-gray-200 flex items-center justify-center text-sm border border-gray-600";
 
                 // 生成红球 HTML
                 let redBallsHtml = ticket.red.map(num => 
@@ -228,3 +228,4 @@
 </body>
 
 </html>
+
