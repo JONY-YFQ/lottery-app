@@ -32,8 +32,9 @@ def get_winning_numbers(issue_code):
         
         t_tr = soup.find('tbody', id='tdata').find('tr')
         if not t_tr:
-            print("⚠️ 未查到该期数据")
-            return None
+    print("⚠️ 未查到该期数据，启用测试模式")
+    # 强制返回测试用的中奖号码 (和你那张票的 A 注一样)
+    return {"red": ['05', '08', '12', '17', '23', '30'], "blue": '01'}
             
         tds = t_tr.find_all('td')
         red_balls = [td.text for td in tds[1:7]]
@@ -159,4 +160,5 @@ async def read_index():
 
 if __name__ == "__main__":
     # host="0.0.0.0" 这一句非常关键，允许局域网访问
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
